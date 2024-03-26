@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="player_first"></div>
+        <div class="name_first"></div>
+        <div class="cloud_first"></div>
+        <div class="name_second"></div>
+        <div class="player_second"></div>
+        <div class="cloud_second"></div>
+        <div class="container">
+            <div class="header">
+                <div class="logo"><img src="images/logo.webp" alt="logo"></div>
+                <h1 class="header_text">FAST WITHDRAWALS</h1>
+            </div>
+            <main class="main">
+                <div class="comands">
+                    <div class="mumbai pulse">
+                        <div></div>
+                    </div>
+                    <div class="vs rotate">
+                        <div></div>
+                    </div>
+                    <div class="delhi pulse">
+                        <div></div>
+                    </div>
+                </div>
+                <div class="info">
+                    <p class="midc">MI VS DC</p>
+                    <p class="date">7 APRIL 2024</p>
+                </div>
+                <button class="btn">REGISTER NOW!</button>
+            </main>
+        </div>
+    </div>
+
+    <script>
+        let wrapper = document.querySelector(".wrapper");
+            function adaptationElements() {
+                const aspectRatio = window.innerWidth / window.innerHeight;
+                let aspectClass;
+
+                if (aspectRatio >= 2) {
+                    aspectClass = 'modificate1';
+                } else if (aspectRatio >= 1.5) {
+                    aspectClass = 'modificate2';
+                } else if (aspectRatio > 1) {
+                    aspectClass = 'modificate3';
+                } else {
+                    aspectClass = 'modificate4';
+                }
+
+                wrapper.className = `wrapper ${aspectClass}`;
+            }
+
+        adaptationElements();
+        window.addEventListener('resize', adaptationElements);
+    </script>
+</body>
+</html>
